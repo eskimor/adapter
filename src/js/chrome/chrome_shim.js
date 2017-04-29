@@ -224,7 +224,9 @@ var chromeShim = {
             timestamp: report.timestamp,
             type: {
               localcandidate: 'local-candidate',
-              remotecandidate: 'remote-candidate'
+              remotecandidate: 'remote-candidate',
+              inboundrtp: 'inbound-rtp',
+              outboundrtp: 'outbound-rtp'
             }[report.type] || report.type
           };
           report.names().forEach(function(name) {
